@@ -146,30 +146,25 @@
     <ClCompile Include="detiling\DirectXTexXboxTile.cpp" />
     <ClCompile Include="detiling\recovered_structs.cpp" />
     <ClCompile Include="H5_bitmap_exporter.cpp" />
-    <ClCompile Include="tagprocessing\TagFramework.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="Bitm.h" />
-    <ClInclude Include="commons.h" />
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
     <ClInclude Include="detiling\DDS.h" />
     <ClInclude Include="detiling\DirectXTexp.h" />
     <ClInclude Include="detiling\DirectXTexXbox.h" />
     <ClInclude Include="detiling\recovered_structs.h" />
     <ClInclude Include="detiling\scoped.h" />
-    <ClInclude Include="tagprocessing\TagFramework.h" />
-    <ClInclude Include="tagprocessing\TagStructs.h" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="packages.config" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
-    <Import Project="packages\directxtex_desktop_2019.2023.6.14.1\build\native\directxtex_desktop_2019.targets" Condition="Exists('packages\directxtex_desktop_2019.2023.6.14.1\build\native\directxtex_desktop_2019.targets')" />
+    <Import Project="packages\directxtex_desktop_2019.2024.1.1.1\build\native\directxtex_desktop_2019.targets" Condition="Exists('packages\directxtex_desktop_2019.2024.1.1.1\build\native\directxtex_desktop_2019.targets')" />
   </ImportGroup>
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
     <PropertyGroup>
       <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
     </PropertyGroup>
-    <Error Condition="!Exists('packages\directxtex_desktop_2019.2023.6.14.1\build\native\directxtex_desktop_2019.targets')" Text="$([System.String]::Format('$(ErrorText)', 'packages\directxtex_desktop_2019.2023.6.14.1\build\native\directxtex_desktop_2019.targets'))" />
+    <Error Condition="!Exists('packages\directxtex_desktop_2019.2024.1.1.1\build\native\directxtex_desktop_2019.targets')" Text="$([System.String]::Format('$(ErrorText)', 'packages\directxtex_desktop_2019.2024.1.1.1\build\native\directxtex_desktop_2019.targets'))" />
   </Target>
 </Project>
